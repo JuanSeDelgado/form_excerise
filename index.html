@@ -17,111 +17,96 @@
             <div class="card-header">
                 <h1 class="card-title text-white">Payment form example</h1>
             </div>
-            <div class="alert alert-danger alert-transparent" role="alert">
-                Some Fields are required
-            </div>
+            <div id="errMsg">
+            </div>  
             <div class="card-body">
-                <form action="">
+                <form id="myForm" action="">
 
                     <div class="row g-3">
                         <fieldset class="col-sm-5 ">
                             <label for="" class="text-white">Card #</label>
-                            <input type="text" class="form-control bg-dark text-white" id="card" placeholder="XXXXXXXXXXX" required>
+                            <input type="text" class="form-control bg-dark text-white" id="cardNumber" name="cardNumber" placeholder="XXXXXXXXXXX" required>
                         </fieldset>
                         <fieldset class="col-sm-3">
                             <label for="" class="text-white">CVC #</label>
-                            <input type="text" class="form-control bg-dark text-white" id="cvc" placeholder="0000" required>
+                            <input type="text" class="form-control bg-dark text-white" id="cvc" name="cvc" placeholder="0000" required>
                         </fieldset>
                         <fieldset class="col-sm-4">
-                            <label for="" class="text-white" >Amount #</label>
-                            <input type="text" class="form-control bg-dark text-white" id="Amount $" placeholder="0000" required>
+                            <label for="" class="text-white">Amount #</label>
+                            <input type="text" class="form-control bg-dark text-white" id="amount" name="amount" placeholder="0000" required>
                         </fieldset>
                     </div>
 
                     <div class="row mt-3">
                         <div class="col-sm-6">
                             <fieldset>
-                                <label for="" class="text-white" >First Name</label>
-                                <input type="text" class="form-control bg-dark text-white" id="firstName" placeholder="" required>
+                                <label for="" class="text-white">First Name</label>
+                                <input type="text" class="form-control bg-dark text-white" id="firstName" name="firstName" placeholder="" required>
                             </fieldset>
                             <fieldset>
-                                <label for="" class="text-white" >City</label>
-                                <input type="text" class="form-control bg-dark text-white" id="city" placeholder="" required>
+                                <label for="" class="text-white">City</label>
+                                <input type="text" class="form-control bg-dark text-white" id="city" name="city" placeholder="" required>
                             </fieldset>
                             <fieldset>
-                                <label for="" class="text-white" >We accept</label><br>
+                                <label for="" class="text-white">We accept</label><br>
                                 <div class="btn-group bg-dark pd-4">
                                     <label for="" class="btn">
                                         <i class="fa-brands fa-cc-visa" style="color: #ffffff;"></i>
-                                        <input type="radio" class="pd-4" name="cardType" id="visa" value="visa">
+                                        <input type="radio" class="pd-4" id="visa" name="cardType" value="visa">
                                     </label>
                                     <label for="" class="btn">
                                         <i class="fa-brands fa-cc-mastercard" style="color: #ffffff;"></i>
-                                        <input type="radio" class="pd-4" name="cardType" id="mastercard" value="mastercard">
+                                        <input type="radio" class="pd-4" id="mastercard" name="cardType" value="mastercard">
                                     </label>
                                     <label for="" class="btn">
                                         <i class="fa-brands fa-cc-amex" style="color: #ffffff;"></i>
-                                        <input type="radio" class="pd-4" name="cardType" id="amex" value="amex">
+                                        <input type="radio" class="pd-4" id="amex" name="cardType" value="amex">
                                     </label>
                                     <label for="" class="btn">
                                         <i class="fa-brands fa-cc-discover" style="color: #ffffff;"></i>
-                                        <input type="radio" class="pd-4" name="cardType" id="discover" value="discover">
+                                        <input type="radio" class="pd-4" id="discover" name="cardType" value="discover">
                                     </label>
                                 </div>
                             </fieldset>
                         </div>
                         <div class="col-sm-6">
-                            
                             <fieldset>
-                                <label for="" class="text-white" >Last Name</label>
-                                <input type="text" class="form-control bg-dark text-white" id="lastName" placeholder="" required>
+                                <label for="" class="text-white">Last Name</label>
+                                <input type="text" class="form-control bg-dark text-white" id="lastName" name="lastName" placeholder="" required>
                             </fieldset>
                             <div class="row g-3">
                                 <fieldset class="col-sm-6">
-                                    <label for="" class="text-white" >State</label>
-                                    <select name="" id="" class="form-select bg-dark text-white" required>
-                                        <option class="text-white bg-dark">
-                                            Pick a state
-                                        </option>
-
-                                        <option class="text-white bg-dark">
-                                            Florida
-                                        </option>
-                                        <option class="text-white bg-dark">
-                                            Delaware
-                                        </option>
-                                        <option class="text-white bg-dark">
-                                            Arizona
-                                        </option>
-                                        <option class="text-white ">
-                                            Texas
-                                        </option>
+                                    <label for="" class="text-white">State</label>
+                                    <select id="state" name="state" class="form-select bg-dark text-white" required>
+                                        <option class="text-white bg-dark">Pick a state</option>
+                                        <option class="text-white bg-dark">Florida</option>
+                                        <option class="text-white bg-dark">Delaware</option>
+                                        <option class="text-white bg-dark">Arizona</option>
+                                        <option class="text-white">Texas</option>
                                     </select>
                                 </fieldset>
                                 <fieldset class="col-sm-6">
-                                    <label for="" class="text-white" >Zip</label>
-                                    <input type="text" class="form-control bg-dark text-white" id="zip" placeholder="" required>
+                                    <label for="" class="text-white">Zip</label>
+                                    <input type="text" class="form-control bg-dark text-white" id="zip" name="zip" placeholder="" required>
                                 </fieldset>
                             </div>
                             <fieldset>
                                 <label for="" class="text-white">Message</label>
-                                <textarea class="form-control bg-dark text-white" id="message" rows="3"></textarea>
+                                <textarea class="form-control bg-dark text-white" id="message" name="message" rows="3"></textarea>
                                 <small class="text-white">Add any notes here</small>
                             </fieldset>
                         </div>
                         <div class="col-sm-12 text-end">
-                            <button class="btn btn-secondary">Cancel</button>
-                            <button class="btn btn-primary">Send</button>
+                            <button class="btn btn-secondary" type="reset">Cancel</button>
+                            <button class="btn btn-primary" type="submit">Send</button>
                         </div>
-                       
                     </div>
                 </form>
             </div>
-        
         </div>
     </div>
-    </div>
 
+    <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
